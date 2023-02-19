@@ -1,0 +1,23 @@
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.web
+        ports:
+            - 8080:8080
+        volumes:
+            - "/home/vagrant/homework/web:/var/www/html:ro"
+        networks:
+            - homework
+        depends_on:
+            - db
+    db:
+        build:
+            context: .
+            dockerfile: Dockerfile.db
+        networks:
+            - homework
+        environment:
+            MYSQL_ROOT_PASSWORD: "12345"
+networks:
+    homework:
