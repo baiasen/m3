@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <title>Факти за България</title>
+    <title>Факти за България - Променено</title>
   </head>
   <body>
     <div align="center">
